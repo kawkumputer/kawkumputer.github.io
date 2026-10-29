@@ -1,6 +1,6 @@
 import { DOCUMENT, Injectable, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { LANGS, Lang } from '../content/content.model';
+import { DEFAULT_LANG, LANGS, Lang } from '../content/content.model';
 import { profile } from '../content/profile';
 import { ogImage, seo, siteUrl } from '../content/seo';
 import { isSet } from './is-set';
@@ -45,7 +45,7 @@ export class SeoService {
 
     this.setLink('canonical', url);
     for (const l of LANGS) this.setLink('alternate', pageUrl(l), l);
-    this.setLink('alternate', pageUrl('fr'), 'x-default');
+    this.setLink('alternate', pageUrl(DEFAULT_LANG), 'x-default');
 
     this.setJsonLd(lang);
   }

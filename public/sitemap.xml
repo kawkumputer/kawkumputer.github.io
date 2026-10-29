@@ -4,12 +4,12 @@
     <loc>https://kawkumputer.github.io/fr/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kawkumputer.github.io/fr/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://kawkumputer.github.io/en/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawkumputer.github.io/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawkumputer.github.io/en/" />
   </url>
   <url>
     <loc>https://kawkumputer.github.io/en/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://kawkumputer.github.io/fr/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://kawkumputer.github.io/en/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawkumputer.github.io/fr/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kawkumputer.github.io/en/" />
   </url>
 </urlset>

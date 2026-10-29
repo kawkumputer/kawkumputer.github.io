@@ -3,7 +3,7 @@
 Site personnel de **Hamath Kane**, ingénieur informatique — *La tech & l'IA au service du pulaar*.
 
 - **Stack** : Angular 22 (composants standalone, signals, zoneless), SCSS, prérendu statique (SSG)
-- **Langues** : français (`/fr/`, par défaut) et anglais (`/en/`), avec des touches de pulaar
+- **Langues** : anglais (`/en/`, par défaut) et français (`/fr/`), avec des touches de pulaar
 - **Hébergement** : GitHub Pages → <https://kawkumputer.github.io/>
 
 ---
@@ -14,14 +14,14 @@ Prérequis : **Node.js 22.22+ ou 24+** (Angular 22 l'exige).
 
 ```bash
 npm install
-npm start            # serveur de dev → http://localhost:4200/fr
+npm start            # serveur de dev → http://localhost:4200/en
 ```
 
 Pour tester la version de production telle qu'elle sera en ligne :
 
 ```bash
-npm run build        # génère dist/my-portfolio/browser (pages /fr et /en prérendues)
-npm run preview      # sert ce dossier → http://localhost:8080/fr/
+npm run build        # génère dist/my-portfolio/browser (pages /en et /fr prérendues)
+npm run preview      # sert ce dossier → http://localhost:8080/en/
 ```
 
 En développement, la console du navigateur liste toutes les valeurs encore à `TODO`.
@@ -127,7 +127,7 @@ src/
 scripts/postbuild.mjs   crée 404.html et .nojekyll pour GitHub Pages
 ```
 
-- **SEO** : `/fr/` et `/en/` sont prérendues en HTML complet au build, avec `title`, `description`, Open Graph, Twitter Card, `canonical`, `hreflang` et des données structurées `Person`. `/` redirige vers `/fr/`, et toute URL inconnue aussi (via `404.html`).
+- **SEO** : `/en/` et `/fr/` sont prérendues en HTML complet au build, avec `title`, `description`, Open Graph, Twitter Card, `canonical`, `hreflang` et des données structurées `Person`. `/` redirige vers `/en/` (langue par défaut, aussi `x-default`), et toute URL inconnue aussi (via `404.html`).
 - **Performance** : seul le hero est hydraté au chargement ; chaque autre section l'est lorsqu'elle arrive à l'écran (`@defer (hydrate on viewport)`). Le fond animé démarre après le chargement, à 30 images/s, et se met en pause hors écran.
 - **Animations** : l'apparition au scroll est 100 % CSS (`animation-timeline: view()`). Elle est désactivée si l'utilisateur préfère réduire les animations, et le contenu reste simplement visible sur les navigateurs qui ne la prennent pas en charge.
 - **Accessibilité** : lien d'évitement, focus visible, navigation au clavier (la touche Échap ferme le menu), contrastes AA, `lang="ff"` sur les passages en pulaar.
@@ -142,4 +142,4 @@ Le dépôt hébergeait auparavant la page d'assistance de Quraan Pulaar. Ces fic
 | --- | --- |
 | `/privacy.html` | Politique de confidentialité (même adresse qu'avant) |
 | `/app-ads.txt` | Déclaration AdMob (même adresse qu'avant) |
-| `/support.html` | Ancienne page d'accueil « Quraan Pulaar - Support » (**l'adresse a changé** : elle était à la racine `/`, qui redirige maintenant vers `/fr/`) |
+| `/support.html` | Ancienne page d'accueil « Quraan Pulaar - Support » (**l'adresse a changé** : elle était à la racine `/`, qui redirige maintenant vers `/en/`) |

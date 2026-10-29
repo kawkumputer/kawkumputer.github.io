@@ -4,8 +4,8 @@ import { ui } from '../content/ui';
 
 @Injectable({ providedIn: 'root' })
 export class I18nService {
-  /** Langue courante, fixée par la route (/fr ou /en). */
-  readonly lang = signal<Lang>('fr');
+  /** Langue courante, fixée par la route (/en ou /fr). L'anglais est la langue par défaut. */
+  readonly lang = signal<Lang>('en');
   /** Libellés d'interface dans la langue courante. */
   readonly t = computed(() => ui[this.lang()]);
 

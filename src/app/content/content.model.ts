@@ -2,7 +2,9 @@ import type { IconName } from '../shared/icon/icons';
 
 /** Langues du site. Le pulaar est utilisé en touches ponctuelles (attribut lang="ff"). */
 export type Lang = 'fr' | 'en';
-export const LANGS: readonly Lang[] = ['fr', 'en'];
+export const LANGS: readonly Lang[] = ['en', 'fr'];
+/** Langue par défaut : cible de la redirection de `/` et valeur `x-default` pour le SEO. */
+export const DEFAULT_LANG: Lang = 'en';
 
 /** Texte traduit, ou texte identique dans toutes les langues. */
 export type Localized = string | Record<Lang, string>;
