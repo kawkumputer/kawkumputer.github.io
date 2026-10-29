@@ -1,6 +1,6 @@
 # Portfolio — Hamath Kane
 
-Site personnel de **Hamath Kane**, ingénieur informatique & IA — *La tech & l'IA au service du pulaar*.
+Site personnel de **Hamath Kane**, ingénieur informatique — *La tech & l'IA au service du pulaar*.
 
 - **Stack** : Angular 22 (composants standalone, signals, zoneless), SCSS, prérendu statique (SSG)
 - **Langues** : français (`/fr/`, par défaut) et anglais (`/en/`), avec des touches de pulaar
@@ -48,7 +48,7 @@ Un texte peut être identique dans les deux langues, ou traduit :
 
 ```ts
 title: 'Backend',                                                       // identique en FR et EN
-title: { fr: 'Ingénieur informatique & IA', en: 'Software & AI Engineer' }, // traduit
+title: { fr: 'Ingénieur informatique', en: 'Software Engineer' }, // traduit
 ```
 
 TypeScript signale une erreur si une traduction manque ou si un champ est mal nommé : `npm run build` sert donc aussi de vérification.

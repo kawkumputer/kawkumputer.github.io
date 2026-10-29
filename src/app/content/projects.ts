@@ -16,6 +16,10 @@ export const projects: Project[] = [
     },
     highlights: [
       {
+        fr: 'En collaboration avec Abou Sy et d’autres spécialistes pularophones',
+        en: 'In collaboration with Abou Sy and other Pulaar-speaking specialists',
+      },
+      {
         fr: 'Corpus d’environ 8 000 paires de phrases, validé par un locuteur natif',
         en: 'A corpus of about 8,000 sentence pairs, validated by a native speaker',
       },
@@ -40,6 +44,10 @@ export const projects: Project[] = [
       en: 'Android / iOS app for reading the Quran with its Pulaar translation, published on Google Play and the App Store.',
     },
     highlights: [
+      {
+        fr: 'En collaboration avec Abou Sy',
+        en: 'In collaboration with Abou Sy',
+      },
       {
         fr: 'Back-end Spring Boot / PostgreSQL (inscription et validation par code)',
         en: 'Spring Boot / PostgreSQL back-end (sign-up with code verification)',
@@ -78,6 +86,12 @@ export const projects: Project[] = [
       fr: 'Application mobile de hadiths en pulaar, disponible sur Android et iOS.',
       en: 'Mobile app of hadiths in Pulaar, available on Android and iOS.',
     },
+    highlights: [
+      {
+        fr: 'En collaboration avec Abou Sy',
+        en: 'In collaboration with Abou Sy',
+      },
+    ],
     tags: ['Mobile', 'Pulaar'],
     links: [
       { kind: 'playstore', label: 'Google Play', url: 'https://play.google.com/store/apps/details?id=com.hadisaaji.hadisaaji' },

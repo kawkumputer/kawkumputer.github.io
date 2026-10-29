@@ -6,7 +6,7 @@ import { Profile } from './content.model';
  */
 export const profile: Profile = {
   name: 'Hamath Kane',
-  title: { fr: 'Ingénieur informatique & IA', en: 'Software & AI Engineer' },
+  title: { fr: 'Ingénieur informatique', en: 'Software Engineer' },
   tagline: {
     fr: "La tech & l'IA au service du pulaar",
     en: 'Tech & AI in service of the Pulaar language',
@@ -57,10 +57,6 @@ export const profile: Profile = {
     highlights: [
       { value: '8', label: { fr: "ans d'expérience fullstack", en: 'years of fullstack experience' } },
       { value: 'M2', label: { fr: "Master Systèmes d'Information", en: 'MSc in Information Systems' } },
-      {
-        value: { fr: '8 000', en: '8,000' },
-        label: { fr: 'paires de phrases français ↔ pulaar', en: 'French ↔ Pulaar sentence pairs' },
-      },
     ],
     commitments: [
       {
