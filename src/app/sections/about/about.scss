@@ -1,0 +1,91 @@
+@use 'mixins' as *;
+
+.about {
+  display: grid;
+  gap: 2.5rem;
+
+  @include up(lg) {
+    grid-template-columns: 1.3fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.about__text {
+  display: grid;
+  align-content: start;
+  gap: 1.1rem;
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+}
+
+.about__side {
+  display: grid;
+  align-content: start;
+  gap: 1.5rem;
+}
+
+.about__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.about__stat {
+  @include card;
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 1rem 0.75rem;
+  text-align: center;
+
+  dd {
+    margin: 0;
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  dt {
+    margin-top: 0.35rem;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+}
+
+.about__commitments {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0;
+}
+
+.commitment {
+  @include card;
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+
+  h3 {
+    font-size: 1.05rem;
+  }
+
+  p {
+    margin-top: 0.25rem;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+}
+
+.commitment__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-size: 1.3rem;
+}

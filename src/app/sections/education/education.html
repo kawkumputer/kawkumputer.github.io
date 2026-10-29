@@ -1,0 +1,23 @@
+<section id="education" class="section" aria-labelledby="education-title">
+  <div class="container">
+    <app-section-title class="reveal" section="education" />
+
+    <ul class="education" role="list">
+      @for (e of education; track $index) {
+        <li class="degree reveal">
+          <span class="degree__icon"><app-icon name="graduation" /></span>
+          <div>
+            @if (e.year) {
+              <p class="degree__year">{{ e.year }}</p>
+            }
+            <h3 class="degree__title">{{ e.degree | l10n }}</h3>
+            <p class="degree__school">{{ e.school }}</p>
+            @if (e.description) {
+              <p class="degree__desc">{{ e.description | l10n }}</p>
+            }
+          </div>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

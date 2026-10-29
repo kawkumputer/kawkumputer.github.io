@@ -1,0 +1,51 @@
+@use 'mixins' as *;
+
+.education {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+
+  @include up(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.degree {
+  @include card;
+  @include card-hover;
+  display: flex;
+  gap: 1.1rem;
+  padding: 1.5rem;
+}
+
+.degree__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-size: 1.4rem;
+}
+
+.degree__year {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-accent);
+}
+
+.degree__title {
+  font-size: 1.15rem;
+}
+
+.degree__school {
+  color: var(--color-accent-2);
+}
+
+.degree__desc {
+  margin-top: 0.5rem;
+  color: var(--color-text-muted);
+}

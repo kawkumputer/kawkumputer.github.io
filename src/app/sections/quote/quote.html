@@ -1,0 +1,13 @@
+<section class="quote" [attr.aria-label]="q.author">
+  <figure class="container quote__inner reveal">
+    <app-icon class="quote__mark" name="quote" />
+    <blockquote>
+      <p class="quote__original" [attr.lang]="q.originalLang">{{ q.original }}</p>
+      <p class="quote__pulaar" lang="ff">{{ q.pulaar }}</p>
+    </blockquote>
+    <figcaption>
+      <cite class="quote__author">— {{ q.author }}</cite>
+      <span class="quote__credit">{{ q.credit | l10n }}</span>
+    </figcaption>
+  </figure>
+</section>

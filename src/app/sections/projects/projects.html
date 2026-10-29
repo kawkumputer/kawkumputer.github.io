@@ -1,0 +1,59 @@
+<section id="projects" class="section section--alt" aria-labelledby="projects-title">
+  <div class="container">
+    <app-section-title class="reveal" section="projects" />
+
+    <ul class="projects" role="list">
+      @for (project of projects; track project.id) {
+        <li class="reveal">
+          <article class="project" [attr.aria-labelledby]="'project-' + project.id">
+            @if (project.status) {
+              <p class="project__status">{{ project.status | l10n }}</p>
+            }
+            <h3 class="project__title" [id]="'project-' + project.id">{{ project.title | l10n }}</h3>
+            <p class="project__desc">{{ project.description | l10n }}</p>
+
+            @if (project.highlights?.length) {
+              <ul class="project__highlights">
+                @for (h of project.highlights; track $index) {
+                  <li>{{ h | l10n }}</li>
+                }
+              </ul>
+            }
+
+            <ul class="tag-list" role="list">
+              @for (tag of project.tags; track tag) {
+                <li class="tag">{{ tag }}</li>
+              }
+            </ul>
+
+            @if (project.links.length) {
+              <ul class="project__links" role="list">
+                @for (link of project.links; track link.url) {
+                  <li>
+                    <a class="project__link" [href]="link.url" target="_blank" rel="noopener">
+                      <app-icon [name]="icons[link.kind]" />
+                      {{ link.label | l10n }}
+                      <span class="visually-hidden">— {{ project.title | l10n }}</span>
+                    </a>
+                  </li>
+                }
+              </ul>
+            }
+          </article>
+        </li>
+      }
+
+      <li class="reveal">
+        <article class="project project--more">
+          <h3 class="project__title">{{ t().projects.more }}</h3>
+          <p class="project__desc">{{ t().projects.moreText }}</p>
+          @if (github) {
+            <a class="project__link" [href]="github" target="_blank" rel="noopener">
+              <app-icon name="github" /> GitHub
+            </a>
+          }
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>

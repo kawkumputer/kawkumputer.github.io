@@ -1,0 +1,32 @@
+@use 'mixins' as *;
+
+.skills {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+
+  @include up(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include up(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skill-card {
+  @include card;
+  @include card-hover;
+  padding: 1.5rem;
+
+  h3 {
+    margin-block: 1rem 0.9rem;
+    font-size: 1.1rem;
+  }
+}
+
+.skill-card__icon {
+  display: inline-flex;
+  color: var(--color-accent);
+  font-size: 1.75rem;
+}

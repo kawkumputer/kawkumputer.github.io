@@ -1,0 +1,123 @@
+@use 'mixins' as *;
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+  padding-block: calc(var(--header-height) + 2rem) 3rem;
+  overflow: hidden;
+  background:
+    radial-gradient(60rem 40rem at 85% 20%, rgb(56 189 248 / 12%), transparent 60%),
+    radial-gradient(40rem 30rem at 10% 90%, rgb(100 255 218 / 8%), transparent 60%),
+    var(--color-bg);
+}
+
+.hero__network {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__code {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  bottom: 2.5rem;
+  margin: 0;
+  color: rgb(168 178 209 / 13%);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.8;
+  pointer-events: none;
+  user-select: none;
+
+  @include up(lg) {
+    display: block;
+  }
+}
+
+.hero__inner {
+  position: relative;
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+
+  @include up(md) {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 3rem;
+  }
+}
+
+.hero__text {
+  order: 2;
+
+  @include up(md) {
+    order: 1;
+  }
+}
+
+.hero__greeting {
+  margin-bottom: 1rem;
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+}
+
+.hero__greeting-tr {
+  color: var(--color-text-muted);
+}
+
+.hero__name {
+  font-size: clamp(2.6rem, 8vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.hero__title {
+  margin-top: 0.75rem;
+  font-size: clamp(1.25rem, 3.5vw, 1.9rem);
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-2));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero__tagline {
+  max-width: 34rem;
+  margin-top: 1rem;
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-block: 2rem 1.75rem;
+}
+
+.hero__photo {
+  order: 1;
+  justify-self: center;
+  width: min(15rem, 62vw);
+
+  @include up(md) {
+    order: 2;
+    width: min(20rem, 100%);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--color-accent);
+    box-shadow:
+      0 0 0 10px rgb(100 255 218 / 8%),
+      0 20px 60px -20px rgb(56 189 248 / 50%);
+  }
+}

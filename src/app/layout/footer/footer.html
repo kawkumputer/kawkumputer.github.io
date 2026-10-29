@@ -1,0 +1,14 @@
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="footer__thanks">
+      <span lang="ff">Jaaraama</span> — {{ t().footer.thanks }}
+    </p>
+    <app-social-links />
+    <p class="footer__meta">
+      © {{ year }} {{ name }} · {{ t().footer.madeWith }}
+    </p>
+    <a class="footer__top" [routerLink]="['/', i18n.lang()]" fragment="top">
+      <app-icon name="arrowUp" /> {{ t().footer.backToTop }}
+    </a>
+  </div>
+</footer>

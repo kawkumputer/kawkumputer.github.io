@@ -1,0 +1,32 @@
+<section id="experience" class="section" aria-labelledby="experience-title">
+  <div class="container">
+    <app-section-title class="reveal" section="experience" />
+
+    <ol class="timeline" role="list">
+      @for (xp of experiences; track $index) {
+        <li class="timeline__item reveal">
+          <article class="xp">
+            @if (isSet(xp.period)) {
+              <p class="xp__period">{{ xp.period | l10n }}</p>
+            }
+            <h3 class="xp__role">{{ xp.role | l10n }}</h3>
+            <p class="xp__context">{{ xp.context | l10n }}</p>
+            <p class="xp__desc">{{ xp.description | l10n }}</p>
+            @if (xp.highlights.length) {
+              <ul class="xp__highlights">
+                @for (h of xp.highlights; track $index) {
+                  <li>{{ h | l10n }}</li>
+                }
+              </ul>
+            }
+            <ul class="tag-list" role="list">
+              @for (tag of xp.tags; track tag) {
+                <li class="tag">{{ tag }}</li>
+              }
+            </ul>
+          </article>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

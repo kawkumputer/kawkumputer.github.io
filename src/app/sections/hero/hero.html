@@ -1,0 +1,50 @@
+<section id="top" class="hero" aria-labelledby="hero-title">
+  <canvas #network class="hero__network" aria-hidden="true"></canvas>
+  <pre class="hero__code" aria-hidden="true"><code>const pulaar = await translate(text, &#123; to: 'ff' &#125;);
+&#64;RestController
+public class Engineer &#123;
+  String mission = "La tech au service du pulaar";
+&#125;
+model = AutoModelForSeq2SeqLM.from_pretrained(nllb)
+git push origin main  # CI/CD ✓</code></pre>
+
+  <div class="container hero__inner">
+    <div class="hero__text">
+      <p class="hero__greeting">
+        <span lang="ff">{{ p.greeting.pulaar }}</span>&ngsp;<span class="hero__greeting-tr">— {{ p.greeting.translation | l10n }}</span>
+      </p>
+      <h1 id="hero-title" class="hero__name">{{ p.name }}</h1>
+      <p class="hero__title">{{ p.title | l10n }}</p>
+      <p class="hero__tagline">{{ p.tagline | l10n }}</p>
+
+      <div class="hero__actions">
+        @if (hasCv) {
+          <a class="btn btn--primary" [href]="p.cvUrl" download>
+            <app-icon name="download" /> {{ t().hero.cv }}
+          </a>
+        }
+        <a
+          class="btn"
+          [class.btn--primary]="!hasCv"
+          [class.btn--ghost]="hasCv"
+          [routerLink]="['/', i18n.lang()]"
+          fragment="contact"
+        >
+          <app-icon name="send" /> {{ t().hero.contact }}
+        </a>
+      </div>
+
+      <app-social-links />
+    </div>
+
+    <div class="hero__photo">
+      <img
+        [ngSrc]="p.photo.src"
+        [width]="p.photo.width"
+        [height]="p.photo.height"
+        [alt]="p.photo.alt | l10n"
+        priority
+      />
+    </div>
+  </div>
+</section>

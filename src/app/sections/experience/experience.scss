@@ -1,0 +1,79 @@
+@use 'mixins' as *;
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 1.5rem;
+  max-width: 50rem;
+  padding: 0 0 0 1.75rem;
+
+  // Ligne verticale
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    left: 0.4rem;
+    width: 2px;
+    background: linear-gradient(var(--color-accent), var(--color-accent-2) 70%, transparent);
+  }
+}
+
+.timeline__item {
+  position: relative;
+
+  // Point de la timeline
+  &::before {
+    content: '';
+    position: absolute;
+    top: 1.6rem;
+    left: -1.75rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    border: 2px solid var(--color-accent);
+    border-radius: 50%;
+    background: var(--color-bg);
+    box-shadow: 0 0 0 4px rgb(100 255 218 / 12%);
+  }
+}
+
+.xp {
+  @include card;
+  padding: 1.5rem;
+}
+
+.xp__period {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-accent);
+}
+
+.xp__role {
+  font-size: 1.2rem;
+}
+
+.xp__context {
+  color: var(--color-accent-2);
+  font-weight: 500;
+}
+
+.xp__desc {
+  margin-top: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.xp__highlights {
+  display: grid;
+  gap: 0.35rem;
+  margin-block: 0.75rem 0;
+  padding-left: 1.1rem;
+  color: var(--color-text-muted);
+
+  li::marker {
+    color: var(--color-accent);
+  }
+}
+
+.tag-list {
+  margin-top: 1rem;
+}

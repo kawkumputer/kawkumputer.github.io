@@ -1,0 +1,19 @@
+<section id="skills" class="section section--alt" aria-labelledby="skills-title">
+  <div class="container">
+    <app-section-title class="reveal" section="skills" />
+
+    <ul class="skills" role="list">
+      @for (group of groups; track $index) {
+        <li class="skill-card reveal">
+          <span class="skill-card__icon"><app-icon [name]="group.icon" /></span>
+          <h3>{{ group.title | l10n }}</h3>
+          <ul class="tag-list" role="list">
+            @for (skill of group.skills; track $index) {
+              <li class="tag">{{ skill | l10n }}</li>
+            }
+          </ul>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

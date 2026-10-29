@@ -1,0 +1,36 @@
+<section id="about" class="section" aria-labelledby="about-title">
+  <div class="container">
+    <app-section-title class="reveal" section="about" />
+
+    <div class="about">
+      <div class="about__text reveal">
+        @for (paragraph of about.paragraphs; track $index) {
+          <p>{{ paragraph | l10n }}</p>
+        }
+      </div>
+
+      <div class="about__side">
+        <dl class="about__stats reveal">
+          @for (h of about.highlights; track $index) {
+            <div class="about__stat">
+              <dt>{{ h.label | l10n }}</dt>
+              <dd>{{ h.value | l10n }}</dd>
+            </div>
+          }
+        </dl>
+
+        <ul class="about__commitments" role="list">
+          @for (c of about.commitments; track $index) {
+            <li class="commitment reveal">
+              <span class="commitment__icon"><app-icon [name]="c.icon" /></span>
+              <div>
+                <h3>{{ c.title | l10n }}</h3>
+                <p>{{ c.text | l10n }}</p>
+              </div>
+            </li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

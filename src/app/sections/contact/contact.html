@@ -1,0 +1,58 @@
+<section id="contact" class="section section--alt" aria-labelledby="contact-title">
+  <div class="container">
+    <app-section-title class="reveal" section="contact" />
+
+    <div class="contact">
+      <div class="contact__aside reveal">
+        <p class="contact__intro">{{ intro | l10n }}</p>
+        <p class="contact__elsewhere">{{ t().contact.elsewhere }}</p>
+        <app-social-links [withLabels]="true" />
+      </div>
+
+      @if (showForm) {
+        <form class="form reveal" (submit)="submit($event)">
+          @if (!configured) {
+            <p class="form__todo">{{ t().contact.notConfigured }}</p>
+          }
+
+          <div class="form__field">
+            <label for="contact-name">{{ t().contact.name }}</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="form__field">
+            <label for="contact-email">{{ t().contact.email }}</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="form__field">
+            <label for="contact-message">{{ t().contact.message }}</label>
+            <textarea id="contact-message" name="message" rows="5" required></textarea>
+          </div>
+
+          <!-- Anti-spam (honeypot) : champ invisible que seuls les robots remplissent. -->
+          <div class="form__hp" aria-hidden="true">
+            <label>Leave empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+          </div>
+          <input type="hidden" name="_language" [value]="i18n.lang()" />
+
+          <button class="btn btn--primary" type="submit" [disabled]="status() === 'sending'">
+            <app-icon name="send" />
+            {{ status() === 'sending' ? t().contact.sending : t().contact.send }}
+          </button>
+
+          <p class="form__status" role="status" aria-live="polite">
+            @switch (status()) {
+              @case ('success') {
+                <span class="form__success">
+                  <span lang="ff">{{ t().contact.successPulaar }}</span> {{ t().contact.success }}
+                </span>
+              }
+              @case ('error') {
+                <span class="form__error">{{ t().contact.error }}</span>
+              }
+            }
+          </p>
+        </form>
+      }
+    </div>
+  </div>
+</section>

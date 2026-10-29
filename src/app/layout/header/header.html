@@ -1,0 +1,45 @@
+<header class="header" [class.header--solid]="scrolled() || menuOpen()">
+  <div class="container header__inner">
+    <a class="header__brand" [routerLink]="['/', i18n.lang()]">
+      HK<span aria-hidden="true">.</span><span class="visually-hidden"> — {{ t().home }}</span>
+    </a>
+
+    <button
+      class="header__toggle"
+      type="button"
+      aria-controls="site-nav"
+      [attr.aria-expanded]="menuOpen()"
+      (click)="menuOpen.set(!menuOpen())"
+    >
+      <span class="visually-hidden">{{ menuOpen() ? t().closeMenu : t().openMenu }}</span>
+      <app-icon [name]="menuOpen() ? 'close' : 'menu'" />
+    </button>
+
+    <nav id="site-nav" class="header__nav" [class.is-open]="menuOpen()" [attr.aria-label]="t().mainNav">
+      <ul class="header__links" role="list">
+        @for (id of sections; track id) {
+          <li>
+            <a [routerLink]="['/', i18n.lang()]" [fragment]="id" (click)="menuOpen.set(false)">
+              {{ t().nav[id] }}
+            </a>
+          </li>
+        }
+      </ul>
+
+      <div class="lang-switch" role="group" [attr.aria-label]="t().langSwitch">
+        @for (l of langs; track l) {
+          <a
+            class="lang-switch__item"
+            [routerLink]="['/', l]"
+            [attr.hreflang]="l"
+            [attr.lang]="l"
+            [attr.aria-current]="l === i18n.lang() ? 'page' : null"
+            (click)="menuOpen.set(false)"
+          >
+            {{ l.toUpperCase() }}<span class="visually-hidden"> — {{ langNames[l] }}</span>
+          </a>
+        }
+      </div>
+    </nav>
+  </div>
+</header>
