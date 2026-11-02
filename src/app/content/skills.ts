@@ -38,6 +38,8 @@ export const skillGroups: SkillGroup[] = [
       { fr: 'Fine-tuning LoRA', en: 'LoRA fine-tuning' },
       'Hugging Face',
       { fr: 'Constitution de corpus', en: 'Corpus building' },
+      { fr: 'Développement assisté par IA', en: 'AI-assisted development' },
+      { fr: 'Agents IA', en: 'AI agents' },
     ],
   },
   {

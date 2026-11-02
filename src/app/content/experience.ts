@@ -20,23 +20,31 @@ export const experiences: Experience[] = [
         en: 'End-to-end journey: subscription (company, point of sale, signatories), activity profile to assess risk, pricing, signature, then consultation and amendments kept in sync with the core banking system',
       },
       {
-        fr: 'API REST Java / Spring Boot en couches, sécurisée par OAuth2 (JWT, scopes), avec PostgreSQL et accès au mainframe (CICS, DB2)',
-        en: 'Layered Java / Spring Boot REST API secured with OAuth2 (JWT, scopes), backed by PostgreSQL and mainframe access (CICS, DB2)',
+        fr: 'Interface web des conseillers en Angular 21 / TypeScript (Angular Material, Bootstrap), authentification OAuth2 / OIDC',
+        en: 'Advisers’ web interface in Angular 21 / TypeScript (Angular Material, Bootstrap), with OAuth2 / OIDC authentication',
+      },
+      {
+        fr: 'API REST Java / Spring Boot en couches, sécurisée par OAuth2 (JWT, scopes), avec accès au mainframe (CICS, DB2)',
+        en: 'Layered Java / Spring Boot REST API secured with OAuth2 (JWT, scopes), with mainframe access (CICS, DB2)',
+      },
+      {
+        fr: 'Couche de persistance PostgreSQL partagée : bibliothèque Java en Spring JDBC publiée en artefact Maven, migrations Flyway, logique en fonctions PL/pgSQL',
+        en: 'Shared PostgreSQL persistence layer: a Spring JDBC Java library published as a Maven artifact, Flyway migrations, logic in PL/pgSQL functions',
       },
       {
         fr: 'Intégrations avec les services internes (référentiel clients, paiement) et génération des documents contractuels',
         en: 'Integrations with internal services (customer reference data, payments) and generation of contract documents',
       },
       {
-        fr: 'Qualité et livraison : JUnit 5, Mockito, JaCoCo, tests fonctionnels Bruno, OpenAPI, déploiement Kubernetes sur plusieurs environnements',
-        en: 'Quality and delivery: JUnit 5, Mockito, JaCoCo, Bruno functional tests, OpenAPI, Kubernetes deployments across environments',
+        fr: 'Qualité et livraison : JUnit 5, Mockito, JaCoCo, Karma / Jasmine, ESLint, tests fonctionnels Bruno, OpenAPI, déploiement Kubernetes via Jenkins sur plusieurs environnements',
+        en: 'Quality and delivery: JUnit 5, Mockito, JaCoCo, Karma / Jasmine, ESLint, Bruno functional tests, OpenAPI, Kubernetes deployments through Jenkins across environments',
       },
       {
         fr: 'Référent IA de la squad : création d’agents et de skills pour automatiser les tâches et accélérer le développement assisté par IA',
         en: 'Squad AI lead: built AI agents and skills to automate tasks and speed up AI-assisted development',
       },
     ],
-    tags: ['Java', 'Spring Boot', 'OAuth2', 'PostgreSQL', 'Kubernetes', 'Angular', 'AI agents'],
+    tags: ['Java', 'Spring Boot', 'Angular', 'OAuth2', 'PostgreSQL', 'Kubernetes', 'AI agents'],
   },
   {
     role: { fr: 'Consultant développeur full stack Java / Angular', en: 'Full stack Java / Angular consultant' },
