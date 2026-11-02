@@ -11,24 +11,32 @@ export const experiences: Experience[] = [
     context: { fr: 'Banque — monétique', en: 'Banking — card payments' },
     period: { fr: 'Avr. 2025 — aujourd’hui', en: 'Apr. 2025 — present' },
     description: {
-      fr: 'Application utilisée par les conseillers d’un réseau d’agences bancaires pour ouvrir les contrats monétiques de leurs clients (acceptation des paiements par carte et en ligne).',
-      en: 'Application used by advisers across a retail bank’s branch network to open card-acceptance and online-payment contracts for their clients.',
+      fr: 'Offre de paiement en ligne pour les commerçants d’une grande banque de détail : le conseiller crée, tarife, fait signer puis suit le contrat qui permet au commerçant d’accepter les paiements par carte sur son site.',
+      en: 'Online payment offer for the merchants of a major retail bank: the adviser creates, prices, gets signed and then tracks the contract that lets a merchant accept card payments on their website.',
     },
     highlights: [
       {
-        fr: 'Parcours de souscription côté conseiller (Angular) et services back-end associés (Java / Spring Boot)',
-        en: 'Built adviser-facing subscription journeys (Angular) and their back-end services (Java / Spring Boot)',
+        fr: 'Parcours de bout en bout : souscription (entreprise, point de vente, signataires), profil d’activité pour évaluer le risque, tarification, signature, puis consultation et modification synchronisées avec le système central',
+        en: 'End-to-end journey: subscription (company, point of sale, signatories), activity profile to assess risk, pricing, signature, then consultation and amendments kept in sync with the core banking system',
       },
       {
-        fr: 'Intégration d’une plateforme de paiement et de services partenaires via API REST',
-        en: 'Integrated a payment platform and partner services through REST APIs',
+        fr: 'API REST Java / Spring Boot en couches, sécurisée par OAuth2 (JWT, scopes), avec PostgreSQL et accès au mainframe (CICS, DB2)',
+        en: 'Layered Java / Spring Boot REST API secured with OAuth2 (JWT, scopes), backed by PostgreSQL and mainframe access (CICS, DB2)',
       },
       {
-        fr: 'Orchestration et sécurisation des échanges inter-services (Spring Security)',
-        en: 'Orchestrated and secured inter-service calls (Spring Security)',
+        fr: 'Intégrations avec les services internes (référentiel clients, paiement) et génération des documents contractuels',
+        en: 'Integrations with internal services (customer reference data, payments) and generation of contract documents',
+      },
+      {
+        fr: 'Qualité et livraison : JUnit 5, Mockito, JaCoCo, tests fonctionnels Bruno, OpenAPI, déploiement Kubernetes sur plusieurs environnements',
+        en: 'Quality and delivery: JUnit 5, Mockito, JaCoCo, Bruno functional tests, OpenAPI, Kubernetes deployments across environments',
+      },
+      {
+        fr: 'Référent IA de la squad : création d’agents et de skills pour automatiser les tâches et accélérer le développement assisté par IA',
+        en: 'Squad AI lead: built AI agents and skills to automate tasks and speed up AI-assisted development',
       },
     ],
-    tags: ['Java', 'Spring Boot', 'Spring Security', 'Angular', 'Jenkins', 'SonarQube'],
+    tags: ['Java', 'Spring Boot', 'OAuth2', 'PostgreSQL', 'Kubernetes', 'Angular', 'AI agents'],
   },
   {
     role: { fr: 'Consultant développeur full stack Java / Angular', en: 'Full stack Java / Angular consultant' },

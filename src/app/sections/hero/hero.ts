@@ -10,7 +10,6 @@ import {
 import { RouterLink } from '@angular/router';
 import { profile } from '../../content/profile';
 import { I18nService } from '../../core/i18n.service';
-import { isSet } from '../../core/is-set';
 import { LocalizePipe } from '../../core/localize.pipe';
 import { Icon } from '../../shared/icon/icon';
 import { SocialLinks } from '../../shared/social-links/social-links';
@@ -26,7 +25,6 @@ export class Hero {
   protected readonly i18n = inject(I18nService);
   protected readonly t = this.i18n.t;
   protected readonly p = profile;
-  protected readonly hasCv = isSet(profile.cvUrl);
 
   private readonly canvas = viewChild.required<ElementRef<HTMLCanvasElement>>('network');
 

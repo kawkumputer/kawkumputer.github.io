@@ -20,7 +20,7 @@ export const ui = {
       education: 'Formation',
       contact: 'Contact',
     } satisfies Record<SectionId, string>,
-    hero: { cv: 'Télécharger mon CV', contact: 'Me contacter' },
+    hero: { contact: 'Me contacter' },
     sections: {
       about: { eyebrow: '01', title: 'À propos' },
       skills: { eyebrow: '02', title: 'Compétences' },
@@ -67,7 +67,7 @@ export const ui = {
       education: 'Education',
       contact: 'Contact',
     },
-    hero: { cv: 'Download my resume', contact: 'Get in touch' },
+    hero: { contact: 'Get in touch' },
     sections: {
       about: { eyebrow: '01', title: 'About me' },
       skills: { eyebrow: '02', title: 'Skills' },

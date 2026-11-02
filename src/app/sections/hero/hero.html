@@ -18,18 +18,7 @@ git push origin main  # CI/CD ✓</code></pre>
       <p class="hero__tagline">{{ p.tagline | l10n }}</p>
 
       <div class="hero__actions">
-        @if (hasCv) {
-          <a class="btn btn--primary" [href]="p.cvUrl" download>
-            <app-icon name="download" /> {{ t().hero.cv }}
-          </a>
-        }
-        <a
-          class="btn"
-          [class.btn--primary]="!hasCv"
-          [class.btn--ghost]="hasCv"
-          [routerLink]="['/', i18n.lang()]"
-          fragment="contact"
-        >
+        <a class="btn btn--primary" [routerLink]="['/', i18n.lang()]" fragment="contact">
           <app-icon name="send" /> {{ t().hero.contact }}
         </a>
       </div>

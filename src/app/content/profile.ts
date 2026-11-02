@@ -23,9 +23,6 @@ export const profile: Profile = {
     height: 320,
   },
 
-  // CV téléchargeable, dans public/assets/cv/.
-  cvUrl: 'assets/cv/CV-Hamath-Kane.pdf',
-
   email: 'kawkumputer@gmail.com',
 
   socials: [

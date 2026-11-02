@@ -47,7 +47,6 @@ export interface Profile {
   /** Message d'accueil en pulaar, avec sa traduction. */
   greeting: { pulaar: string; translation: Localized };
   photo: { src: string; alt: Localized; width: number; height: number };
-  cvUrl: string;
   email: string;
   socials: Link[];
   about: {

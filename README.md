@@ -34,7 +34,7 @@ En développement, la console du navigateur liste toutes les valeurs encore à `
 
 | Fichier | Contenu |
 | --- | --- |
-| [`profile.ts`](src/app/content/profile.ts) | Nom, titre, accroche, salutation en pulaar, photo, CV, email, réseaux sociaux, texte « À propos », Formspree |
+| [`profile.ts`](src/app/content/profile.ts) | Nom, titre, accroche, salutation en pulaar, photo, email, réseaux sociaux, texte « À propos », Formspree |
 | [`skills.ts`](src/app/content/skills.ts) | Groupes de compétences |
 | [`experience.ts`](src/app/content/experience.ts) | Timeline des missions (de la plus récente à la plus ancienne) |
 | [`projects.ts`](src/app/content/projects.ts) | Projets (un modèle à copier se trouve en bas du fichier) |
@@ -75,7 +75,7 @@ Types de liens possibles : `github`, `huggingface`, `playstore`, `appstore`, `we
 
 ### Règle des `TODO`
 
-**Toute valeur qui commence par `TODO` est masquée sur le site** : lien, bouton CV, période d'une expérience. Aucun lien cassé n'est donc publié. Il suffit de remplacer la valeur pour que l'élément apparaisse.
+**Toute valeur qui commence par `TODO` est masquée sur le site** : lien, période d'une expérience. Aucun lien cassé n'est donc publié. Il suffit de remplacer la valeur pour que l'élément apparaisse.
 
 ### À compléter
 
@@ -85,7 +85,7 @@ Types de liens possibles : `github`, `huggingface`, `playstore`, `appstore`, `we
 | `profile.ts` → `contact.formspreeId` | Crée un formulaire gratuit sur [formspree.io](https://formspree.io) et colle son identifiant (la partie après `https://formspree.io/f/`). **Tant qu'il manque, le formulaire n'est visible qu'en dev.** |
 | `projects.ts` | URLs Google Play et App Store de Quraan Pulaar ; URL exacte du modèle Hugging Face si tu veux pointer dessus directement. |
 
-**Mettre à jour le CV ou la photo** : remplace `public/assets/cv/CV-Hamath-Kane.pdf` ou `public/assets/img/profile.jpg` en gardant le même nom (photo carrée, 640 px conseillé). Attention : le CV en ligne est public, avec tout ce qu'il contient (téléphone, noms de clients…).
+**Mettre à jour la photo** : remplace `public/assets/img/profile.jpg` en gardant le même nom (photo carrée, 640 px conseillé). Le site ne propose pas de téléchargement de CV.
 | Textes en pulaar | `Bisimilla !` (hero), `Jaaraama` (pied de page), `A jaaraama !` (confirmation du formulaire) : **formulations à valider**. Elles se trouvent dans `profile.ts`, `ui.ts` et `layout/footer/footer.html`. |
 
 ### Image d'aperçu (Facebook / LinkedIn)
